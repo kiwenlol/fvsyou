@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Yard Market · Free HBCU Student Marketplace</title>
+<meta name="description" content="The Yard Market is a free marketplace for HBCU students. Buy, sell, swap and hire on campus with zero fees, student-verified accounts and safe meetup spots.">
+<meta property="og:title" content="The Yard Market · Free HBCU Student Marketplace">
+<meta property="og:description" content="Buy, sell, swap and hire on campus. Zero fees. Students only.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#5b0f1e">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%235b0f1e'/><text x='32' y='44' font-family='Georgia' font-size='34' font-weight='700' text-anchor='middle' fill='%23f2b632'>Y</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5b0f1e; --maroon-2:#7a1a2c; --gold:#f2b632; --gold-2:#ffd36b;
+  --bg:#fbf7f0; --surface:#ffffff; --ink:#1d1416; --muted:#6b5d60; --line:#eadfd3;
+  --chip:#f6ecdc; --shadow:0 20px 50px -20px rgba(60,10,20,.35);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#140b0d; --surface:#1f1316; --ink:#f6eee6; --muted:#b8a8a6; --line:#3a2629; --chip:#2b1a1d; --shadow:0 20px 50px -20px rgba(0,0,0,.7)}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#2a0a10;box-shadow:0 10px 24px -10px rgba(242,182,50,.8)}
+.btn-ghost{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.9}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--maroon) 92%,transparent);backdrop-filter:blur(10px);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;white-space:nowrap;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:800;font-size:20px}
+.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--gold);color:var(--maroon);font-size:20px}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600;opacity:.92}
+.links a:hover{color:var(--gold-2)}
+nav .btn{padding:10px 18px;font-size:14px}
+@media (max-width:760px){.links{display:none}}
+@media (max-width:420px){nav .logo{font-size:17px}nav .btn{padding:9px 14px;font-size:13px;white-space:nowrap}}
+
+/* hero */
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#8c2338 0%,transparent 60%),linear-gradient(160deg,var(--maroon) 0%,#3e0913 100%);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,.15))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:96px}
+.hero h1{font-size:clamp(40px,6vw,70px);margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:clamp(17px,2vw,20px);opacity:.88;max-width:520px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 26px}
+.trust{display:flex;flex-wrap:wrap;gap:18px;font-size:14px;opacity:.85}
+.trust span::before{content:"✓ ";color:var(--gold)}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:48px}.phone-wrap{order:2}}
+
+/* phone mockup */
+.phone-wrap{position:relative;display:flex;justify-content:center}
+.phone{width:290px;height:590px;border-radius:44px;background:#0d0708;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 2px #3b2328 inset;transform:rotate(3deg)}
+.screen{height:100%;border-radius:34px;background:#fbf7f0;color:#1d1416;overflow:hidden;display:flex;flex-direction:column}
+.s-top{background:var(--maroon);color:#fff;padding:22px 16px 14px}
+.s-top small{opacity:.7;font-size:11px}
+.s-top .t{font-family:Fraunces,serif;font-weight:800;font-size:19px}
+.s-search{margin-top:10px;background:rgba(255,255,255,.14);border-radius:12px;padding:9px 12px;font-size:12px;opacity:.9}
+.s-cats{display:flex;gap:6px;padding:12px 14px 4px;overflow:hidden}
+.s-cats span{flex:none;font-size:11px;font-weight:600;padding:6px 10px;border-radius:999px;background:#f1e4cf}
+.s-cats span:first-child{background:var(--gold)}
+.s-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px}
+.item{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px -8px rgba(0,0,0,.25)}
+.item .img{height:84px;display:grid;place-items:center;font-size:34px}
+.item .meta{padding:7px 9px 9px;font-size:11px}
+.item .meta b{display:block;font-size:12px}
+.item .free{color:#1f7a3f;font-weight:700}
+.float{position:absolute;background:#fff;color:#1d1416;border-radius:16px;padding:12px 14px;font-size:13px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center}
+.float i{font-style:normal;font-size:22px}
+.f1{left:-4px;top:90px;animation:bob 5s ease-in-out infinite}
+.f2{right:-6px;bottom:110px;animation:bob 6s ease-in-out infinite reverse}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@media (max-width:420px){.f1,.f2{display:none}}
+
+/* ticker */
+.ticker{background:var(--gold);color:#2a0a10;font-weight:700;overflow:hidden;white-space:nowrap;padding:14px 0;font-size:15px}
+.ticker div{display:inline-block;animation:scroll 32s linear infinite}
+.ticker span{margin:0 22px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker div,.f1,.f2{animation:none}}
+
+section{padding:96px 0}
+.head{max-width:640px;margin-bottom:46px}
+.head h2{font-size:clamp(32px,4.4vw,48px);margin:10px 0 12px}
+.head p{color:var(--muted);font-size:18px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Fraunces,serif;font-weight:800;font-size:44px;color:var(--gold);display:block;margin-bottom:10px}
+.step h3{font-size:22px;margin-bottom:8px}
+.step p{color:var(--muted)}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+
+/* features */
+.features{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feat{padding:26px;border-radius:20px;background:var(--bg);border:1px solid var(--line)}
+.feat .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;background:var(--maroon);margin-bottom:16px}
+.feat h3{font-size:19px;margin-bottom:6px}
+.feat p{color:var(--muted);font-size:15px}
+.feat.big{grid-column:span 2;background:linear-gradient(135deg,var(--maroon),#3e0913);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between}
+.feat.big p{color:rgba(255,255,255,.82)}
+.feat.big .ic{background:var(--gold)}
+.zero{font-family:Fraunces,serif;font-weight:800;font-size:clamp(64px,9vw,110px);line-height:1;color:var(--gold)}
+@media (max-width:820px){.fgrid{grid-template-columns:1fr}.feat.big{grid-column:auto}}
+
+/* categories */
+.cats{display:flex;flex-wrap:wrap;gap:12px}
+.cat{display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;background:var(--chip);font-weight:600;border:1px solid var(--line);transition:background .15s,color .15s}
+.cat:hover{background:var(--maroon);color:#fff}
+.cat i{font-style:normal;font-size:20px}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:18px}
+.q p{font-family:Fraunces,serif;font-size:19px;line-height:1.35}
+.q footer{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.q .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--maroon-2)}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+@media (max-width:820px){.quotes{grid-template-columns:1fr}}
+
+/* faq */
+.faq>*{max-width:780px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::after{content:"+";color:var(--gold);font-size:26px;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:10px}
+
+/* waitlist */
+.join{background:linear-gradient(160deg,var(--maroon),#3e0913);color:#fff;border-radius:32px;padding:clamp(32px,6vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.join::before{content:"Y";position:absolute;right:-20px;bottom:-90px;font-family:Fraunces,serif;font-weight:800;font-size:360px;color:rgba(255,255,255,.05);line-height:1}
+.join h2{font-size:clamp(32px,4.4vw,46px);margin:10px 0 12px}
+.join p{opacity:.85}
+form{display:grid;gap:12px;position:relative}
+input,select{width:100%;padding:15px 16px;border-radius:14px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:15px}
+input::placeholder{color:rgba(255,255,255,.6)}
+input:focus,select:focus{outline:none;border-color:var(--gold)}
+select option{color:#1d1416}
+form .btn{justify-content:center}
+.ok{display:none;background:rgba(242,182,50,.15);border:1px solid var(--gold);padding:16px;border-radius:14px;font-weight:600}
+@media (max-width:820px){.join{grid-template-columns:1fr}}
+
+footer.site{padding:48px 0;color:var(--muted);font-size:14px}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer.site .logo{color:var(--ink);font-size:18px}
+footer.site .logo b{width:28px;height:28px;font-size:16px}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo"><b>Y</b>The Yard Market</a>
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#shop">Shop</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#join" class="btn btn-gold">Join the waitlist</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">For HBCU students · 100% free</span>
+      <h1>Your campus.<br>Your culture.<br><em>Your market.</em></h1>
+      <p class="lead">Buy, sell, swap and hire with other students at your HBCU. No listing fees, no selling fees. Every account is student-verified.</p>
+      <div class="cta">
+        <a href="#join" class="btn btn-gold">Get early access →</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
+      </div>
+      <div class="trust"><span>No fees, ever</span><span>.edu verified</span><span>Safe meetup spots</span></div>
+    </div>
+
+    <div class="phone-wrap" aria-hidden="true">
+      <div class="phone">
+        <div class="screen">
+          <div class="s-top">
+            <small>Good morning 👋</small>
+            <div class="t">On the Yard today</div>
+            <div class="s-search">🔍  Search textbooks, fits, tickets…</div>
+          </div>
+          <div class="s-cats"><span>All</span><span>Textbooks</span><span>Dorm</span><span>Fits</span><span>Tickets</span></div>
+          <div class="s-grid">
+            <div class="item"><div class="img" style="background:#f7e3b5">📚</div><div class="meta"><b>Bio 101 textbook</b><span>$20 · Library steps</span></div></div>
+            <div class="item"><div class="img" style="background:#e8d5f0">👟</div><div class="meta"><b>Jordans, size 10</b><span>$85 · Student center</span></div></div>
+            <div class="item"><div class="img" style="background:#d4ecdc">🪴</div><div class="meta"><b>Mini fridge</b><span class="free">FREE · Move-out</span></div></div>
+            <div class="item"><div class="img" style="background:#f5d0d6">🎟️</div><div class="meta"><b>Homecoming ticket</b><span>$40 · Stadium gate</span></div></div>
+            <div class="item"><div class="img" style="background:#d6e4f5">💇🏾</div><div class="meta"><b>Braids, Sat appts</b><span>$60 · Dorm B</span></div></div>
+            <div class="item"><div class="img" style="background:#fbe6c8">🎧</div><div class="meta"><b>AirPods Pro</b><span>$110 · Quad</span></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="float f1"><i>💸</i><div><b>Sold!</b><br>Chem lab coat · $15</div></div>
+      <div class="float f2"><i>🛡️</i><div><b>Verified student</b><br>Class of '28</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>📚 Textbooks</span><span>✦</span><span>👗 Homecoming fits</span><span>✦</span><span>🛋️ Dorm essentials</span><span>✦</span><span>🎟️ Game tickets</span><span>✦</span><span>💇🏾 Hair &amp; beauty</span><span>✦</span><span>📸 Photographers</span><span>✦</span><span>🧑🏾‍🏫 Tutoring</span><span>✦</span><span>🎨 Student-made merch</span><span>✦</span>
+  <span>📚 Textbooks</span><span>✦</span><span>👗 Homecoming fits</span><span>✦</span><span>🛋️ Dorm essentials</span><span>✦</span><span>🎟️ Game tickets</span><span>✦</span><span>💇🏾 Hair &amp; beauty</span><span>✦</span><span>📸 Photographers</span><span>✦</span><span>🧑🏾‍🏫 Tutoring</span><span>✦</span><span>🎨 Student-made merch</span><span>✦</span>
+</div></div>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>From your dorm to their hands in three steps.</h2>
+      <p>No shipping and no strangers from across the country. Just students on your campus.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Verify your student email</h3><p>Sign up with your school email. Only verified students at your HBCU can see and message you.</p></div>
+      <div class="step reveal"><h3>Snap it, price it, post it</h3><p>List an item or a service in under a minute. Sell it, swap it, or give it away for free.</p></div>
+      <div class="step reveal"><h3>Meet on the Yard</h3><p>Chat in the app, then meet up at a well-lit, campus-approved spot. Keep 100% of what you earn.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Why The Yard</span>
+      <h2>Built by us, for us.</h2>
+      <p>Marketplaces take a cut. We don't. Everything here is designed for HBCU campus life.</p>
+    </div>
+    <div class="fgrid">
+      <div class="feat big reveal">
+        <div class="ic">💰</div>
+        <div><div class="zero">$0</div><h3>Zero fees. Forever.</h3><p>No listing fees, no selling fees, no "premium" upsells to get seen. Every dollar stays with the student who earned it.</p></div>
+      </div>
+      <div class="feat reveal"><div class="ic">🎓</div><h3>Students only</h3><p>Every account is checked against a school email. No bots, no outside resellers, no scams from strangers.</p></div>
+      <div class="feat reveal"><div class="ic">📍</div><h3>Safe meetup spots</h3><p>Suggested public spots on campus, like the library, student center or quad, are built into every chat.</p></div>
+      <div class="feat reveal"><div class="ic">✂️</div><h3>Sell your skills</h3><p>Braids, barbering, tutoring, photography, DJ sets. Post a service and get booked by classmates.</p></div>
+      <div class="feat reveal"><div class="ic">🔄</div><h3>Swap &amp; give away</h3><p>Trade fits, pass down textbooks, or post move-out freebies so nothing good ends up in a dumpster.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">What's on the Yard</span>
+      <h2>Everything campus life runs on.</h2>
+    </div>
+    <div class="cats reveal">
+      <a class="cat"><i>📚</i>Textbooks &amp; notes</a>
+      <a class="cat"><i>🛋️</i>Dorm &amp; furniture</a>
+      <a class="cat"><i>👗</i>Fashion &amp; fits</a>
+      <a class="cat"><i>🎟️</i>Game &amp; event tickets</a>
+      <a class="cat"><i>💻</i>Tech &amp; electronics</a>
+      <a class="cat"><i>💇🏾</i>Hair &amp; beauty</a>
+      <a class="cat"><i>🧑🏾‍🏫</i>Tutoring</a>
+      <a class="cat"><i>📸</i>Photo &amp; video</a>
+      <a class="cat"><i>🎨</i>Student-made merch</a>
+      <a class="cat"><i>🚗</i>Rides home</a>
+      <a class="cat"><i>🏠</i>Sublets &amp; roommates</a>
+      <a class="cat"><i>🎁</i>Free stuff</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="quotes">
+      <figure class="q reveal"><p>"I made my books money back in one weekend just selling last semester's textbooks."</p><footer><span class="av">J</span>Junior, Biology</footer></figure>
+      <figure class="q reveal"><p>"I book half my braid appointments from here now. No IG DMs getting lost."</p><footer><span class="av" style="background:#b8860b">A</span>Sophomore, Business</footer></figure>
+      <figure class="q reveal"><p>"Move-out week I gave away a whole futon in 20 minutes. Way better than the dumpster."</p><footer><span class="av" style="background:#2f5d50">D</span>Senior, Engineering</footer></figure>
+    </div>
+    <p class="note">Illustrative examples of how students can use The Yard Market.</p>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="head reveal" style="margin-bottom:20px">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions? We got you.</h2>
+    </div>
+    <details><summary>Is it really free?</summary><p>Yes. Listing, buying, selling and messaging are all free. We will never take a cut of your sales.</p></details>
+    <details><summary>Who can join?</summary><p>Current HBCU students with a valid school email. Each campus has its own market, so you only trade with people at your school.</p></details>
+    <details><summary>How do payments work?</summary><p>You settle up however you're comfortable, whether that's cash at the meetup or your favorite payment app. The Yard Market never holds your money.</p></details>
+    <details><summary>How do you keep it safe?</summary><p>Student-only verification, in-app chat (so you never have to share your number), suggested public campus meetup spots, and one-tap reporting.</p></details>
+    <details><summary>When is it launching?</summary><p>We're rolling out campus by campus. Join the waitlist and tell us your school. The campuses with the most sign-ups go first.</p></details>
+  </div>
+</section>
+
+<section id="join" style="padding-top:0">
+  <div class="wrap">
+    <div class="join reveal">
+      <div>
+        <span class="eyebrow">Early access</span>
+        <h2>Bring The Yard Market to your campus.</h2>
+        <p>Sign up and put your school on the map. The campuses with the most sign-ups launch first.</p>
+      </div>
+      <form id="wl" novalidate>
+        <input type="text" name="name" placeholder="First name" autocomplete="given-name" required>
+        <input type="email" name="email" placeholder="School email (.edu)" autocomplete="email" required>
+        <input type="text" name="school" placeholder="Your HBCU" required>
+        <select name="role" aria-label="I want to">
+          <option>I want to buy &amp; sell</option>
+          <option>I want to offer a service</option>
+          <option>I want to be a campus ambassador</option>
+        </select>
+        <button class="btn btn-gold" type="submit">Join the waitlist →</button>
+        <div class="ok" id="ok">You're on the list! 🎉 We'll email you when your campus goes live.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="#" class="logo"><b>Y</b>The Yard Market</a>
+    <span>Free marketplace for HBCU students · © <span id="yr"></span> The Yard Market</span>
+  </div>
+</footer>
+
+<script>
+// Waitlist: set FORM_ENDPOINT to a Formspree (or similar) URL to collect sign-ups.
+const FORM_ENDPOINT = "";
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+const form = document.getElementById("wl");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  if (!form.reportValidity()) return;
+  const btn = form.querySelector("button");
+  btn.disabled = true; btn.textContent = "Joining…";
+  try {
+    if (FORM_ENDPOINT) {
+      const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+      if (!res.ok) throw new Error();
+    }
+    if (!FORM_ENDPOINT) document.getElementById("ok").textContent = "Thanks! Sign-ups open very soon. Check back shortly.";
+    [...form.elements].forEach(el => el.style.display = "none");
+    document.getElementById("ok").style.display = "block";
+  } catch {
+    btn.disabled = false; btn.textContent = "Try again →";
+  }
+});
+
+const io = new IntersectionObserver((es) => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
