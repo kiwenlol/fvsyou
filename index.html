@@ -3,24 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Yard Market · Free HBCU Student Marketplace</title>
-<meta name="description" content="The Yard Market is a free marketplace for HBCU students. Buy, sell, swap and hire on campus with zero fees, student-verified accounts and safe meetup spots.">
-<meta property="og:title" content="The Yard Market · Free HBCU Student Marketplace">
+<title>FVSYOU! · Free HBCU Student Marketplace</title>
+<meta name="description" content="FVSYOU! is a free marketplace for HBCU students to buy, sell, swap and hire with each other, starting at Fort Valley State. Trade on campus with zero fees, student-verified accounts and safe meetup spots.">
+<meta property="og:title" content="FVSYOU! · Free HBCU Student Marketplace">
 <meta property="og:description" content="Buy, sell, swap and hire on campus. Zero fees. Students only.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#5b0f1e">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%235b0f1e'/><text x='32' y='44' font-family='Georgia' font-size='34' font-weight='700' text-anchor='middle' fill='%23f2b632'>Y</text></svg>">
+<meta name="theme-color" content="#0a2f8f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a2f8f'/><text x='32' y='44' font-family='Georgia' font-size='34' font-weight='700' text-anchor='middle' fill='%23f2b632'>F</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --maroon:#5b0f1e; --maroon-2:#7a1a2c; --gold:#f2b632; --gold-2:#ffd36b;
-  --bg:#fbf7f0; --surface:#ffffff; --ink:#1d1416; --muted:#6b5d60; --line:#eadfd3;
-  --chip:#f6ecdc; --shadow:0 20px 50px -20px rgba(60,10,20,.35);
+  --blue:#0a2f8f; --blue-2:#1d47b8; --gold:#f2b632; --gold-2:#ffd36b;
+  --bg:#f7f8fc; --surface:#ffffff; --ink:#0f1630; --muted:#5a6280; --line:#dfe4f2;
+  --chip:#eef1fa; --shadow:0 20px 50px -20px rgba(10,30,90,.35);
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#140b0d; --surface:#1f1316; --ink:#f6eee6; --muted:#b8a8a6; --line:#3a2629; --chip:#2b1a1d; --shadow:0 20px 50px -20px rgba(0,0,0,.7)}
+  :root{--bg:#0a0f22; --surface:#121a36; --ink:#eef1fb; --muted:#a3abc8; --line:#24305a; --chip:#18224a; --shadow:0 20px 50px -20px rgba(0,0,0,.7)}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -30,15 +30,15 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.08;letter-spacing:-.01
 .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:#2a0a10;box-shadow:0 10px 24px -10px rgba(242,182,50,.8)}
+.btn-gold{background:var(--gold);color:#0b1a4a;box-shadow:0 10px 24px -10px rgba(242,182,50,.8)}
 .btn-ghost{background:transparent;color:inherit;border:1.5px solid currentColor;opacity:.9}
 .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 
 /* nav */
-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--maroon) 92%,transparent);backdrop-filter:blur(10px);color:#fff}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--blue) 92%,transparent);backdrop-filter:blur(10px);color:#fff}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;white-space:nowrap;align-items:center;gap:10px;font-family:Fraunces,serif;font-weight:800;font-size:20px}
-.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--gold);color:var(--maroon);font-size:20px}
+.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--gold);color:var(--blue);font-size:20px}
 .links{display:flex;gap:26px;font-size:14px;font-weight:600;opacity:.92}
 .links a:hover{color:var(--gold-2)}
 nav .btn{padding:10px 18px;font-size:14px}
@@ -46,7 +46,7 @@ nav .btn{padding:10px 18px;font-size:14px}
 @media (max-width:420px){nav .logo{font-size:17px}nav .btn{padding:9px 14px;font-size:13px;white-space:nowrap}}
 
 /* hero */
-.hero{background:radial-gradient(1200px 500px at 85% -10%,#8c2338 0%,transparent 60%),linear-gradient(160deg,var(--maroon) 0%,#3e0913 100%);color:#fff;position:relative;overflow:hidden}
+.hero{background:radial-gradient(1200px 500px at 85% -10%,#2a5bd7 0%,transparent 60%),linear-gradient(160deg,var(--blue) 0%,#061a55 100%);color:#fff;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,.15))}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:96px}
 .hero h1{font-size:clamp(40px,6vw,70px);margin:14px 0 18px}
@@ -60,13 +60,13 @@ nav .btn{padding:10px 18px;font-size:14px}
 /* phone mockup */
 .phone-wrap{position:relative;display:flex;justify-content:center}
 .phone{width:290px;height:590px;border-radius:44px;background:#0d0708;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 2px #3b2328 inset;transform:rotate(3deg)}
-.screen{height:100%;border-radius:34px;background:#fbf7f0;color:#1d1416;overflow:hidden;display:flex;flex-direction:column}
-.s-top{background:var(--maroon);color:#fff;padding:22px 16px 14px}
+.screen{height:100%;border-radius:34px;background:#f7f8fc;color:#0f1630;overflow:hidden;display:flex;flex-direction:column}
+.s-top{background:var(--blue);color:#fff;padding:22px 16px 14px}
 .s-top small{opacity:.7;font-size:11px}
 .s-top .t{font-family:Fraunces,serif;font-weight:800;font-size:19px}
 .s-search{margin-top:10px;background:rgba(255,255,255,.14);border-radius:12px;padding:9px 12px;font-size:12px;opacity:.9}
 .s-cats{display:flex;gap:6px;padding:12px 14px 4px;overflow:hidden}
-.s-cats span{flex:none;font-size:11px;font-weight:600;padding:6px 10px;border-radius:999px;background:#f1e4cf}
+.s-cats span{flex:none;font-size:11px;font-weight:600;padding:6px 10px;border-radius:999px;background:#e3e9f8}
 .s-cats span:first-child{background:var(--gold)}
 .s-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 14px}
 .item{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px -8px rgba(0,0,0,.25)}
@@ -74,15 +74,36 @@ nav .btn{padding:10px 18px;font-size:14px}
 .item .meta{padding:7px 9px 9px;font-size:11px}
 .item .meta b{display:block;font-size:12px}
 .item .free{color:#1f7a3f;font-weight:700}
-.float{position:absolute;background:#fff;color:#1d1416;border-radius:16px;padding:12px 14px;font-size:13px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center}
+.float{position:absolute;background:#fff;color:#0f1630;border-radius:16px;padding:12px 14px;font-size:13px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center}
 .float i{font-style:normal;font-size:22px}
 .f1{left:-4px;top:90px;animation:bob 5s ease-in-out infinite}
 .f2{right:-6px;bottom:110px;animation:bob 6s ease-in-out infinite reverse}
 @keyframes bob{50%{transform:translateY(-10px)}}
 @media (max-width:420px){.f1,.f2{display:none}}
 
+/* pledge */
+.pledge{background:var(--surface);border-bottom:1px solid var(--line)}
+.pledge .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding-top:16px;padding-bottom:16px}
+.pledge .amt{font-family:Fraunces,serif;font-weight:800;font-size:28px;line-height:1;white-space:nowrap}
+.pledge .amt small{font-family:Inter,sans-serif;font-weight:600;font-size:14px;color:var(--muted)}
+.pbar{height:14px;border-radius:999px;background:var(--chip);border:1px solid var(--line);overflow:hidden}
+.pfill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--gold));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.pmeta{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:var(--muted);margin-top:6px;font-weight:600}
+.pledge .btn{padding:11px 20px;font-size:14px}
+@media (max-width:700px){.pledge .wrap{grid-template-columns:1fr;gap:10px}.pledge .btn{justify-content:center}}
+
+/* photos */
+.photos{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}
+.ph{position:relative;border-radius:22px;overflow:hidden;background:linear-gradient(140deg,var(--blue),#061a55);color:#fff;display:flex;align-items:flex-end}
+.ph:nth-child(1){grid-row:span 2}
+.ph:nth-child(2),.ph:nth-child(5){background:linear-gradient(140deg,#c98f12,var(--gold))}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph::before{content:attr(data-emoji);position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-size:64px;opacity:.9}
+.ph span{position:relative;z-index:1;margin:14px;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px);font-size:13px;font-weight:600}
+@media (max-width:820px){.photos{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:170px}.ph:nth-child(1){grid-column:span 2;grid-row:auto}}
+
 /* ticker */
-.ticker{background:var(--gold);color:#2a0a10;font-weight:700;overflow:hidden;white-space:nowrap;padding:14px 0;font-size:15px}
+.ticker{background:var(--gold);color:#0b1a4a;font-weight:700;overflow:hidden;white-space:nowrap;padding:14px 0;font-size:15px}
 .ticker div{display:inline-block;animation:scroll 32s linear infinite}
 .ticker span{margin:0 22px}
 @keyframes scroll{to{transform:translateX(-50%)}}
@@ -105,10 +126,10 @@ section{padding:96px 0}
 .features{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feat{padding:26px;border-radius:20px;background:var(--bg);border:1px solid var(--line)}
-.feat .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;background:var(--maroon);margin-bottom:16px}
+.feat .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;background:var(--blue);margin-bottom:16px}
 .feat h3{font-size:19px;margin-bottom:6px}
 .feat p{color:var(--muted);font-size:15px}
-.feat.big{grid-column:span 2;background:linear-gradient(135deg,var(--maroon),#3e0913);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between}
+.feat.big{grid-column:span 2;background:linear-gradient(135deg,var(--blue),#061a55);color:#fff;border:0;display:flex;flex-direction:column;justify-content:space-between}
 .feat.big p{color:rgba(255,255,255,.82)}
 .feat.big .ic{background:var(--gold)}
 .zero{font-family:Fraunces,serif;font-weight:800;font-size:clamp(64px,9vw,110px);line-height:1;color:var(--gold)}
@@ -117,7 +138,7 @@ section{padding:96px 0}
 /* categories */
 .cats{display:flex;flex-wrap:wrap;gap:12px}
 .cat{display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;background:var(--chip);font-weight:600;border:1px solid var(--line);transition:background .15s,color .15s}
-.cat:hover{background:var(--maroon);color:#fff}
+.cat:hover{background:var(--blue);color:#fff}
 .cat i{font-style:normal;font-size:20px}
 
 /* quotes */
@@ -125,7 +146,7 @@ section{padding:96px 0}
 .q{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:18px}
 .q p{font-family:Fraunces,serif;font-size:19px;line-height:1.35}
 .q footer{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
-.q .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--maroon-2)}
+.q .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:var(--blue-2)}
 .note{font-size:13px;color:var(--muted);margin-top:14px}
 @media (max-width:820px){.quotes{grid-template-columns:1fr}}
 
@@ -138,15 +159,15 @@ details[open] summary::after{transform:rotate(45deg)}
 details p{color:var(--muted);margin-top:10px}
 
 /* waitlist */
-.join{background:linear-gradient(160deg,var(--maroon),#3e0913);color:#fff;border-radius:32px;padding:clamp(32px,6vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
-.join::before{content:"Y";position:absolute;right:-20px;bottom:-90px;font-family:Fraunces,serif;font-weight:800;font-size:360px;color:rgba(255,255,255,.05);line-height:1}
+.join{background:linear-gradient(160deg,var(--blue),#061a55);color:#fff;border-radius:32px;padding:clamp(32px,6vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.join::before{content:"F";position:absolute;right:-20px;bottom:-90px;font-family:Fraunces,serif;font-weight:800;font-size:360px;color:rgba(255,255,255,.05);line-height:1}
 .join h2{font-size:clamp(32px,4.4vw,46px);margin:10px 0 12px}
 .join p{opacity:.85}
 form{display:grid;gap:12px;position:relative}
 input,select{width:100%;padding:15px 16px;border-radius:14px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;font:inherit;font-size:15px}
 input::placeholder{color:rgba(255,255,255,.6)}
 input:focus,select:focus{outline:none;border-color:var(--gold)}
-select option{color:#1d1416}
+select option{color:#0f1630}
 form .btn{justify-content:center}
 .ok{display:none;background:rgba(242,182,50,.15);border:1px solid var(--gold);padding:16px;border-radius:14px;font-weight:600}
 @media (max-width:820px){.join{grid-template-columns:1fr}}
@@ -165,7 +186,7 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
 
 <nav>
   <div class="wrap">
-    <a href="#" class="logo"><b>Y</b>The Yard Market</a>
+    <a href="#" class="logo"><b>F</b>FVSYOU!</a>
     <div class="links">
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
@@ -176,12 +197,23 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
   </div>
 </nav>
 
+<div class="pledge" id="pledge">
+  <div class="wrap">
+    <div class="amt"><span id="praised">$0</span> <small>pledged</small></div>
+    <div>
+      <div class="pbar" role="progressbar" aria-label="Pledged toward launch goal" aria-valuemin="0" id="pbar"><div class="pfill" id="pfill"></div></div>
+      <div class="pmeta"><span id="ppct">0% funded</span><span>Goal: <b id="pgoal">$1,000</b> to launch at FVSU</span></div>
+    </div>
+    <a href="#join" class="btn btn-gold" id="pbtn">Pledge to launch →</a>
+  </div>
+</div>
+
 <header class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow">For HBCU students · 100% free</span>
+      <span class="eyebrow">Wildcat-made · launching at Fort Valley State</span>
       <h1>Your campus.<br>Your culture.<br><em>Your market.</em></h1>
-      <p class="lead">Buy, sell, swap and hire with other students at your HBCU. No listing fees, no selling fees. Every account is student-verified.</p>
+      <p class="lead">The free marketplace for HBCU students to buy, sell, swap and hire each other. It launches first at Fort Valley State, then spreads to every HBCU. No fees. Students only.</p>
       <div class="cta">
         <a href="#join" class="btn btn-gold">Get early access →</a>
         <a href="#how" class="btn btn-ghost">See how it works</a>
@@ -193,7 +225,7 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
       <div class="phone">
         <div class="screen">
           <div class="s-top">
-            <small>Good morning 👋</small>
+            <small>Good morning, Wildcat 🐾</small>
             <div class="t">On the Yard today</div>
             <div class="s-search">🔍  Search textbooks, fits, tickets…</div>
           </div>
@@ -209,7 +241,7 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
         </div>
       </div>
       <div class="float f1"><i>💸</i><div><b>Sold!</b><br>Chem lab coat · $15</div></div>
-      <div class="float f2"><i>🛡️</i><div><b>Verified student</b><br>Class of '28</div></div>
+      <div class="float f2"><i>🛡️</i><div><b>Verified student</b><br>FVSU · Class of '28</div></div>
     </div>
   </div>
 </header>
@@ -218,6 +250,23 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
   <span>📚 Textbooks</span><span>✦</span><span>👗 Homecoming fits</span><span>✦</span><span>🛋️ Dorm essentials</span><span>✦</span><span>🎟️ Game tickets</span><span>✦</span><span>💇🏾 Hair &amp; beauty</span><span>✦</span><span>📸 Photographers</span><span>✦</span><span>🧑🏾‍🏫 Tutoring</span><span>✦</span><span>🎨 Student-made merch</span><span>✦</span>
   <span>📚 Textbooks</span><span>✦</span><span>👗 Homecoming fits</span><span>✦</span><span>🛋️ Dorm essentials</span><span>✦</span><span>🎟️ Game tickets</span><span>✦</span><span>💇🏾 Hair &amp; beauty</span><span>✦</span><span>📸 Photographers</span><span>✦</span><span>🧑🏾‍🏫 Tutoring</span><span>✦</span><span>🎨 Student-made merch</span><span>✦</span>
 </div></div>
+
+<section id="life" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Life on the Yard</span>
+      <h2>Made for how Wildcats actually live.</h2>
+      <p>Game days, homecoming, move-in and move-out. Everything you need is already on campus.</p>
+    </div>
+    <div class="photos reveal">
+      <div class="ph" data-emoji="🐾"><img src="images/photo-1.jpg" alt="" onerror="this.remove()"><span>Homecoming week</span></div>
+      <div class="ph" data-emoji="📚"><img src="images/photo-2.jpg" alt="" onerror="this.remove()"><span>Textbook swaps</span></div>
+      <div class="ph" data-emoji="🏈"><img src="images/photo-3.jpg" alt="" onerror="this.remove()"><span>Game day</span></div>
+      <div class="ph" data-emoji="💇🏾"><img src="images/photo-4.jpg" alt="" onerror="this.remove()"><span>Student businesses</span></div>
+      <div class="ph" data-emoji="🛋️"><img src="images/photo-5.jpg" alt="" onerror="this.remove()"><span>Move-in essentials</span></div>
+    </div>
+  </div>
+</section>
 
 <section id="how">
   <div class="wrap">
@@ -237,7 +286,7 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
 <section id="features" class="features">
   <div class="wrap">
     <div class="head reveal">
-      <span class="eyebrow">Why The Yard</span>
+      <span class="eyebrow">Why FVSYOU!</span>
       <h2>Built by us, for us.</h2>
       <p>Marketplaces take a cut. We don't. Everything here is designed for HBCU campus life.</p>
     </div>
@@ -284,7 +333,7 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
       <figure class="q reveal"><p>"I book half my braid appointments from here now. No IG DMs getting lost."</p><footer><span class="av" style="background:#b8860b">A</span>Sophomore, Business</footer></figure>
       <figure class="q reveal"><p>"Move-out week I gave away a whole futon in 20 minutes. Way better than the dumpster."</p><footer><span class="av" style="background:#2f5d50">D</span>Senior, Engineering</footer></figure>
     </div>
-    <p class="note">Illustrative examples of how students can use The Yard Market.</p>
+    <p class="note">Illustrative examples of how students can use FVSYOU!.</p>
   </div>
 </section>
 
@@ -296,7 +345,7 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
     </div>
     <details><summary>Is it really free?</summary><p>Yes. Listing, buying, selling and messaging are all free. We will never take a cut of your sales.</p></details>
     <details><summary>Who can join?</summary><p>Current HBCU students with a valid school email. Each campus has its own market, so you only trade with people at your school.</p></details>
-    <details><summary>How do payments work?</summary><p>You settle up however you're comfortable, whether that's cash at the meetup or your favorite payment app. The Yard Market never holds your money.</p></details>
+    <details><summary>How do payments work?</summary><p>You settle up however you're comfortable, whether that's cash at the meetup or your favorite payment app. FVSYOU! never holds your money.</p></details>
     <details><summary>How do you keep it safe?</summary><p>Student-only verification, in-app chat (so you never have to share your number), suggested public campus meetup spots, and one-tap reporting.</p></details>
     <details><summary>When is it launching?</summary><p>We're rolling out campus by campus. Join the waitlist and tell us your school. The campuses with the most sign-ups go first.</p></details>
   </div>
@@ -307,13 +356,13 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
     <div class="join reveal">
       <div>
         <span class="eyebrow">Early access</span>
-        <h2>Bring The Yard Market to your campus.</h2>
-        <p>Sign up and put your school on the map. The campuses with the most sign-ups launch first.</p>
+        <h2>Be one of the first Wildcats on FVSYOU!</h2>
+        <p>Fort Valley State goes live first. Students at other HBCUs: sign up and tell us your school, because the campuses with the most sign-ups launch next.</p>
       </div>
       <form id="wl" novalidate>
         <input type="text" name="name" placeholder="First name" autocomplete="given-name" required>
         <input type="email" name="email" placeholder="School email (.edu)" autocomplete="email" required>
-        <input type="text" name="school" placeholder="Your HBCU" required>
+        <input type="text" name="school" placeholder="Your HBCU (e.g. Fort Valley State)" required>
         <select name="role" aria-label="I want to">
           <option>I want to buy &amp; sell</option>
           <option>I want to offer a service</option>
@@ -328,12 +377,26 @@ footer.site .logo b{width:28px;height:28px;font-size:16px}
 
 <footer class="site">
   <div class="wrap">
-    <a href="#" class="logo"><b>Y</b>The Yard Market</a>
-    <span>Free marketplace for HBCU students · © <span id="yr"></span> The Yard Market</span>
+    <a href="#" class="logo"><b>F</b>FVSYOU!</a>
+    <span>Free marketplace for HBCU students · © <span id="yr"></span> FVSYOU! · Independent student project, not affiliated with or endorsed by Fort Valley State University.</span>
   </div>
 </footer>
 
 <script>
+// Pledge bar: update these numbers as pledges come in. PLEDGE_URL = your pledge/payment page (empty = scroll to the waitlist).
+const PLEDGED = 51, GOAL = 1000, PLEDGE_URL = "";
+(() => {
+  const fmt = n => "$" + n.toLocaleString("en-US");
+  const pct = Math.min(100, PLEDGED / GOAL * 100);
+  document.getElementById("praised").textContent = fmt(PLEDGED);
+  document.getElementById("pgoal").textContent = fmt(GOAL);
+  document.getElementById("ppct").textContent = (pct < 10 ? pct.toFixed(1) : Math.round(pct)) + "% funded";
+  const bar = document.getElementById("pbar");
+  bar.setAttribute("aria-valuemax", GOAL); bar.setAttribute("aria-valuenow", PLEDGED);
+  requestAnimationFrame(() => setTimeout(() => document.getElementById("pfill").style.width = Math.max(pct, 2) + "%", 200));
+  if (PLEDGE_URL) { const b = document.getElementById("pbtn"); b.href = PLEDGE_URL; b.target = "_blank"; b.rel = "noopener"; }
+})();
+
 // Waitlist: set FORM_ENDPOINT to a Formspree (or similar) URL to collect sign-ups.
 const FORM_ENDPOINT = "";
 document.getElementById("yr").textContent = new Date().getFullYear();
